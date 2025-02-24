@@ -1,0 +1,55 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;   
+  transition: width 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.sidebar-open .main-content {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+}
+
+.sidebar-closed .main-content {
+  margin-left: 60px;
+  width: calc(100% - 60px);
+}
+img{
+  width: 70%;
+  margin-bottom: 5px;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.menu-icon {
+  cursor: pointer;
+  font-size: 30%;
+  margin-top: 120%;
+}
+
+.sub-heading1{
+  font-size: 12px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+.sidebar .MuiListItemText-primary {
+  font-size: 12px !important; 
+}
+
+
+
+.sidebar .MuiSvgIcon-root {
+  font-size: 18px !important;
+}

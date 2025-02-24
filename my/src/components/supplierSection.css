@@ -1,0 +1,127 @@
+.supplier-page-layout {
+  display: flex;
+  height: 100vh; 
+  flex-direction: column;
+  width: 100%;
+  transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out;  
+  }
+  
+  .supplier-container {
+    flex-grow: 1;
+  width: 100vw;
+  max-width: 100%;
+  transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out;  
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  overflow: auto; 
+  }
+  .supplier-table-wrapper {
+    width: 100%;
+    overflow-x: auto; 
+  }
+  
+  .sidebar-open .supplier-container{
+    margin-left: 250px;
+    width: calc(100% - 250px);
+  }
+  
+  .sidebar-closed .supplier-container{
+    margin-left: 60px;
+    width: calc(100% - 60px);
+  }
+
+  .supplier-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .supplier-action-buttons button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .supplier-table {
+    width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  }
+  
+  .supplier-table th,
+  .supplier-table td {
+    padding: 20px ;
+    text-align: left;
+    border: 1px solid #ddd;
+    white-space: nowrap;
+  }
+  
+.supplier-table th {
+    background-color: #f5f5f5;
+  }
+  
+  .supplier-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .supplier-search-filter-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .supplier-search-box {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .supplier-date-filter-button {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .supplier-page-layout {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .supplier-container {
+        margin-left: 0; 
+        width: 100%;
+        padding: 15px;
+    }
+
+    .supplier-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .supplier-action-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .supplier-search-filter-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .supplier-search-box,
+    .supplier-date-filter-button {
+        width: 100%;
+    }
+
+    .supplier-table {
+        display: block;
+        overflow-x: auto; 
+    }
+}

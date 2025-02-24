@@ -1,0 +1,127 @@
+.paymentsInvoice-page-layout {
+  display: flex;
+  height: 100vh; 
+  flex-direction: column;
+  width: 100%;
+  transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out;  
+}
+  
+  .paymentsInvoice-container {
+    flex-grow: 1;
+  width: 100vw;
+  max-width: 100%;
+  transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out;  
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  overflow: auto; 
+  }
+  
+  .sidebar-open .paymentsInvoice-container{
+    margin-left: 250px;
+    width: calc(100% - 250px);
+  }
+  
+  .sidebar-closed .paymentsInvoice-container {
+    margin-left: 60px;
+    width: calc(100% - 60px);
+  }
+
+  .paymentsInvoice-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .paymentsInvoice-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  .paymentsInvoice-action-buttons button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .paymentsInvoice-table {
+    width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  }
+  
+  .paymentsInvoice-table th,
+  .paymentsInvoice-table td {
+    padding: 20px ;
+    text-align: left;
+    border: 1px solid #ddd;
+    white-space: nowrap;
+  }
+  
+.paymentsInvoice-table th {
+    background-color: #f5f5f5;
+  }
+  
+  .paymentsInvoice-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .paymentsInvoice-search-filter-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .paymentsInvoice-search-box {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .paymentsInvoice-date-filter-button {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .paymentsInvoice-page-layout {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .paymentsInvoice-container {
+        margin-left: 0; 
+        width: 100%;
+        padding: 15px;
+    }
+
+    .paymentsInvoice-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .paymentsInvoice-action-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .paymentsInvoice-search-filter-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .paymentsInvoice-search-box,
+    .paymentsInvoice-date-filter-button {
+        width: 100%;
+    }
+
+    .paymentsInvoice-table {
+        display: block;
+        overflow-x: auto; 
+    }
+}

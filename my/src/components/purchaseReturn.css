@@ -1,0 +1,129 @@
+.Return-page-layout {
+  display: flex;
+  height: 100vh; 
+  flex-direction: column;
+  width: 100%;
+  transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out;  
+  }
+  
+  .purchaseReturn-container {
+    flex-grow: 1;
+  width: 100vw;
+  max-width: 100%;
+  transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out;  
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  overflow: auto; 
+  }
+
+  .return-table-wrapper{
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .sidebar-open .purchaseReturn-container {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+  }
+  
+  .sidebar-closed .purchaseReturn-container {
+    margin-left: 60px;
+    width: calc(100% - 60px);
+  }
+  
+  .purchaseReturn-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .Return-action-buttons button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .Return-purchases-table {
+    width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  }
+  
+  .Return-purchases-table th,
+  .Return-purchases-table td {
+    padding: 20px ;
+  text-align: left;
+  border: 1px solid #ddd;
+  white-space: nowrap;
+  }
+  
+  .Return-purchases-table th {
+    background-color: #f5f5f5;
+  }
+  
+  .Return-purchases-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .Return-search-filter-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .Return-search-box {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .Return-date-filter-button {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+
+  @media (max-width: 768px) {
+    .Return-page-layout {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .purchaseReturn-container {
+        margin-left: 0; 
+        width: 100%;
+        padding: 15px;
+    }
+
+    .purchaseReturn-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .Return-action-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .Return-search-filter-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .Return-search-box,
+    .Return-date-filter-button {
+        width: 100%;
+    }
+
+    .Return-purchases-table {
+        display: block;
+        overflow-x: auto; 
+    }
+}

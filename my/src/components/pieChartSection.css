@@ -1,0 +1,136 @@
+.piechart-container {
+  display: flex;
+  gap: 20px; 
+  padding: 10px;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  align-items: flex-start;
+}
+
+.top-selling {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 400px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.chart-container {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+ .piechart-container h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  overflow: auto;
+}
+
+.tabs button {
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.tabs button:hover, .tabs .active-tab {
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+
+
+.recent-activities {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  width: 500px; 
+  height: 450px; 
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative; 
+}
+
+.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow-x: auto; 
+  max-height: 500px;
+  display: block; 
+  white-space: nowrap;
+}
+
+.invoice-table th,
+.invoice-table td {
+  padding: 8px;
+  border: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.invoice-table th {
+  background-color: #f9fafb;
+  font-weight: bold;
+}
+
+.invoice-table tr:nth-child(even) {
+  background-color: #f3f4f6;
+}
+
+.invoice-table a {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.status-badge {
+  display: inline-block;
+  background-color: #3b82f6;
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .piechart-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-selling, .recent-activities {
+    width: 90%; 
+  }
+
+  .tabs {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .tabs button {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+}
