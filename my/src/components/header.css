@@ -16,7 +16,7 @@
   .user-info {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
   }
   
   .user-info span {
@@ -51,7 +51,7 @@
   width: 20px;
   height: auto;
   margin-right: 5px;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 .pos-button {
@@ -63,7 +63,7 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 7px;
 }
 .pos-button:hover{
   background-color: white;

@@ -10,10 +10,10 @@ const Purchases = () => {
   
   return (
     <div className={`page-layout ${isSidebarOpen ? "sidebar-open" : ""}`}>
-      <Header />
     <div className="page-layout">
     <SideBar isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} />
       <div className="purchases-container">
+      <Header />
       <div className="purchases-header">
         <h3>Invoices</h3>
         <div className="action-buttons">

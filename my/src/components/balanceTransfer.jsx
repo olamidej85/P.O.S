@@ -22,12 +22,12 @@ const BalanceTransfer = () => {
         <div className="balance-header">
           <h3>Balance</h3>
           <div className="balance-action-buttons">
-            <button onClick={() => navigate(-1)} className="back-button">🔙 Back</button>
+            <button onClick={() => navigate("/dashboard")} className="back-button">🔙 Back</button>
             <button className="balance-refresh-button">🔄</button>
             <button className="balance-download-button">⬇️</button>
             <button className="balance-export-button">📄</button>
             <button className="balance-print-button">🖨️</button>
-            <button className="balance-create-button">Create ➕</button>
+            <button className="balance-create-button" onClick={() => navigate("/transferCreat")} >Create ➕</button>
           </div>
         </div>
         <div className="balance-search-filter-section">

@@ -10,21 +10,21 @@ const Purchases = () => {
   
   return (
     <div className={`page-layout ${isSidebarOpen ? "sidebar-open" : ""}`}>
-      <Header />
     <div className="page-layout">
     <SideBar isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} />
       <div className="purchases-container">
+      <Header />
       <div className="purchases-header">
         <h3>Purchases</h3>
         <div className="action-buttons">
-          <button onClick={() => navigate(-1)} className="back-button">
+          <button onClick={() => navigate('/dashboard')} className="back-button">
             🔙 Back
           </button>
           <button className="refresh-button">🔄</button>
           <button className="download-button">⬇️</button>
           <button className="export-button">📄</button>
           <button className="print-button">🖨️</button>
-          <button className="create-button">Create ➕</button>
+          <button className="create-button"  onClick={() => navigate('/purchaseCreat')}>Create ➕</button>
         </div>
       </div>
       <div className="purchases-search-filter-section">

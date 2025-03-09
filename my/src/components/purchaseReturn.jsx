@@ -10,21 +10,22 @@ const PurchaseReturn = () => {
   
   return (
     <div className={`page-layout ${isSidebarOpen ? "sidebar-open" : ""}`}>
-    <Header />
+    
     <div className="Return-page-layout">
     <SideBar isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} />
       <div className="purchaseReturn-container">
+      <Header />
       <div className="purchaseReturn-header">
         <h3>Purchase Returns</h3>
         <div className="Return-action-buttons">
-          <button onClick={() => navigate(-1)} className="back-button">
+          <button onClick={() => navigate('/dashboard')} className="back-button">
             🔙 Back
           </button>
           <button className="Return-refresh-button">🔄</button>
           <button className="Return-download-button">⬇️</button>
           <button className="Return-export-button">📄</button>
           <button className="Return-print-button">🖨️</button>
-          <button className="Return-create-button">Create ➕</button>
+          <button className="Return-create-button"  onClick={() => navigate('/purchaseReturnCreat')}>Create ➕</button>
         </div>
       </div>
       <div className="Return-search-filter-section">

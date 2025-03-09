@@ -15,19 +15,19 @@ const SalesReturns = () => {
 
   return (
     <div className={`page-layout ${isSidebarOpen ? "sidebar-open" : ""}`}>
-  <Header />
   <div className="salesReturn-page-layout">
   <SideBar isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} />
       <div className="salesReturn-container">
+      <Header />
         <div className="salesReturn-header">
           <h3>Sales Return</h3>
           <div className="salesReturn-action-buttons">
-            <button onClick={() => navigate(-1)} className="back-button">🔙 Back</button>
+            <button onClick={() => navigate("/dashboard")} className="back-button">🔙 Back</button>
             <button className="salesReturn-refresh-button">🔄</button>
             <button className="salesReturn-download-button">⬇️</button>
             <button className="salesReturn-export-button">📄</button>
             <button className="salesReturn-print-button">🖨️</button>
-            <button className="salesReturn-create-button">Create ➕</button>
+            <button className="salesReturn-create-button " onClick={() => navigate("/salesReturnCreat")}>Create ➕</button>
           </div>
         </div>
         <div className="salesReturn-search-filter-section">

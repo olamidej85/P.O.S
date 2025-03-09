@@ -87,7 +87,45 @@
     border-radius: 4px;
     cursor: pointer;
   }
+  .create-purchase-container {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
   
+  .purchase-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .purchase-form input, 
+  .purchase-form select,
+  .purchase-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .purchase-form button {
+    cursor: pointer;
+  }
+  .head h2{
+    font-size: 30px;
+  }
+  .head{
+    display: flex;
+    justify-content: space-between;
+  }
+.bck-btn{
+  padding: 7px 15px;
+  background-color: rgb(30, 29, 29);
+  color: white;
+  border-radius: 5px;
+}
 
   @media (max-width: 768px) {
     .Return-page-layout {

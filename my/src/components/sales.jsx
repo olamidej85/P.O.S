@@ -20,19 +20,19 @@ const Sales = () => {
 
   return (
     <div className={`page-layout ${isSidebarOpen ? "sidebar-open" : ""}`}>
-    <Header />
     <div className="sales-page-layout">
     <SideBar isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} />
       <div className="salesInvoice-container">
+      <Header />
         <div className="salesInvoice-header">
           <h3>Sales Invoices</h3>
           <div className="salesInvoice-action-buttons">
-            <button onClick={() => navigate(-1)} className="back-button">🔙 Back</button>
+            <button onClick={() => navigate('/dashboard')} className="back-button">🔙 Back</button>
             <button className="salesInvoice-refresh-button">🔄</button>
             <button className="salesInvoice-download-button">⬇️</button>
             <button className="salesInvoice-export-button">📄</button>
             <button className="salesInvoice-print-button">🖨️</button>
-            <button className="salesInvoice-create-button">Create ➕</button>
+            <button className="salesInvoice-create-button" onClick={() => navigate('/salesCreat')}>Create ➕</button>
           </div>
         </div>
         <div className="salesInvoice-search-filter-section">

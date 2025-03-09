@@ -21,11 +21,21 @@ import BalanceAdjustments from './components/balanceAdjustments';
 import Transaction from './components/transaction';
 import NonInvoice from './components/nonInvoice';
 import NonPurchase from './components/nonPurchase';
+import PurchaseCreat from './components/purchaseCreat';
+import PurchaseReturnCreat from './components/purchaseReturnCreat';
+import SalesCreat from './components/salesCreat';
+import SalesReturnCreat from './components/salesReturnCreat';
+import PaymentCreat from './components/paymentCreat';
+import SupplierCreat from './components/supplierCreat';
+import ExpensesCreat from './components/expensesCreat';
+import TransferCreat from './components/transferCreat';
+
+
 
 const App = () => {
   return (
     <Router>
-      <Sidebar/>
+      
       <Routes>
         <Route path="/" element={<LoginPage />} />
         <Route path="/dashBoard" element={<DashBoard />} />
@@ -47,6 +57,15 @@ const App = () => {
         <Route path="/NonInvoice" element={<NonInvoice />} />
         <Route path="/NonPurchase" element={<NonPurchase />} />
         <Route path="/BalanceAdjustments" element={<BalanceAdjustments />} />
+        <Route path="/PurchaseCreat" element={<PurchaseCreat/>} />
+        <Route path="/PurchaseReturnCreat" element={<PurchaseReturnCreat/>} />
+        <Route path="/SalesCreat" element={<SalesCreat/>} />
+        <Route path="/SalesReturnCreat" element={<SalesReturnCreat/>} />
+        <Route path="/SupplierCreat" element={<SupplierCreat/>} />
+        <Route path="/ExpensesCreat" element={<ExpensesCreat/>} />
+        <Route path="/TransferCreat" element={<TransferCreat/>} />
+        <Route path="/PaymentCreat" element={<PaymentCreat/>} />
+        <Route path="/PaymentCreat" element={<PaymentCreat/>} />
       </Routes>
     </Router>
   );

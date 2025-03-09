@@ -23,12 +23,12 @@ const ExpensesSection = () => {
         <div className="expenses-header">
           <h3>Expenses</h3>
           <div className="expenses-action-buttons">
-            <button onClick={() => navigate(-1)} className="back-button">🔙 Back</button>
+            <button onClick={() => navigate("/dashboard")} className="back-button">🔙 Back</button>
             <button className="expenses-refresh-button">🔄</button>
             <button className="expenses-download-button">⬇️</button>
             <button className="expense-export-button">📄</button>
             <button className="expenses-print-button">🖨️</button>
-            <button className="expenses-create-button">Create ➕</button>
+            <button className="expenses-create-button" onClick={() => navigate("/expensesCreat")} >Create ➕</button>
           </div>
         </div>
         <div className="expenses-search-filter-section">

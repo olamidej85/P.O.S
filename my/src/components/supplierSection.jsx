@@ -19,16 +19,16 @@ const SupplierSection = () => {
     <Header />
     <div className="supplier-page-layout">
     <SideBar isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} />
-      <div className="supplier-container">
+      <div className="suppliers-container">
         <div className="supplier-header">
           <h3>Purchase Payments</h3>
           <div className="supplier-action-buttons">
-            <button onClick={() => navigate(-1)} className="back-button">🔙 Back</button>
+            <button onClick={() => navigate("/dashboard")} className="back-button">🔙 Back</button>
             <button className="supplier-refresh-button">🔄</button>
             <button className="supplier-download-button">⬇️</button>
             <button className="supplier-export-button">📄</button>
             <button className="supplier-print-button">🖨️</button>
-            <button className="supplier-create-button">Create ➕</button>
+            <button className="supplier-create-button"  onClick={() => navigate("/supplierCreat")}>Create ➕</button>
           </div>
         </div>
         <div className="supplier-search-filter-section">

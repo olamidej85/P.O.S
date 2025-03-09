@@ -16,19 +16,19 @@ const Payments = () => {
 
   return (
     <div className={`page-layout ${isSidebarOpen ? "sidebar-open" : ""}`}>
-    <Header />
     <div className="paymentsInvoice-page-layout">
     <SideBar  isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} />
       <div className="paymentsInvoice-container">
+      <Header />
         <div className="paymentsInvoice-header">
           <h3>Invoice Payments</h3>
           <div className="paymentsInvoice-action-buttons">
-            <button onClick={() => navigate(-1)} className="back-button">🔙 Back</button>
+            <button onClick={() => navigate("/dashboard")} className="back-button">🔙 Back</button>
             <button className="paymentsInvoice-refresh-button">🔄</button>
             <button className="paymentsInvoice-download-button">⬇️</button>
             <button className="paymentsInvoice-export-button">📄</button>
             <button className="paymentsInvoice-print-button">🖨️</button>
-            <button className="paymentsInvoice-create-button">Create ➕</button>
+            <button className="paymentsInvoice-create-button" onClick={() => navigate("/paymentCreat")}>Create ➕</button>
           </div>
         </div>
         <div className="paymentsInvoice-search-filter-section">
